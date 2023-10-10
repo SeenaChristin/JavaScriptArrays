@@ -1,6 +1,6 @@
 function flattenElements(nestedArr,flatArr){
     for(let index =0; index<nestedArr.length; index++){
-        if(typeof(nestedArr[index])!='number'){
+        if(Array.isArray(nestedArr[index])){
             flattenElements(nestedArr[index],flatArr);
         }
         else{
